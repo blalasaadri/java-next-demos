@@ -41,7 +41,8 @@ RUN sudo echo "Running 'sudo' for Gitpod: success"
 RUN git clone https://github.com/jenv/jenv.git ~/.jenv
 ENV PATH="$HOME/.jenv/bin:$PATH"
 RUN bash -c "echo 'export PATH=\"$HOME/.jenv/bin:$PATH\"' >> ~/.bash_profile \
-             && echo 'eval \"$($HOME/.jenv/bin/jenv init -)\"' >> ~/.bash_profile"
+             && echo 'eval \"\$(jenv init -)\"' >> ~/.bash_profile \
+             && echo \"source ~/.bash_profile\" >> ~/.bashrc"
 ## Place 'm2-repository' in /workspace because (1) that's a fast volume, (2) it survives workspace-restarts and (3) it can be warmed-up by pre-builds.
 RUN curl -s "https://get.sdkman.io" | bash \
  && bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
