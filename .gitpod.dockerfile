@@ -78,6 +78,9 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
 #             && sdk install java 9.0.4-open \
 #             && jenv add /home/gitpod/.sdkman/candidates/java/9.0.4-open \
 #             && ln -s /home/gitpod/.sdkman/candidates/java/9.0.4-open /home/gitpod/.sdkman/candidates/java/9"
+## Remove SDKMAN from the path, so it's not in the way of jEnv
+RUN bash -c "head -n -4 ~/.bashrc > ~/.bashrc"
+
 RUN jenv rehash
 RUN bash -c "jenv sh-enable-plugin export \
              && jenv sh-enable-plugin maven"
