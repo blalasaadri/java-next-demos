@@ -1,5 +1,5 @@
 source ~/.bash_profile
-PATH="$HOME/.sdkman/candidats/maven/current/bin:$PATH"
+PATH="$HOME/.sdkman/candidates/maven/current/bin:$PATH"
 
 ## COLOURS
 ## If not running interactively, don't do anything
