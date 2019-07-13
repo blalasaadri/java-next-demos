@@ -1,5 +1,7 @@
 image:
   file: .gitpod.dockerfile
+tasks:
+  - command: jenv shell 14-ea && jshell
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
