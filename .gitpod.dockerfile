@@ -83,9 +83,9 @@ RUN bash -c "jenv sh-enable-plugin export \
              && jenv sh-enable-plugin maven"
 RUN jenv global 10.0
 
-COPY .gitpod.bashrc .
-RUN bash -c "cat .gitpod.bashrc >> ~/.bashrc \
-             && rm .gitpod.bashrc"
+COPY .gitpod.bash_profile .
+RUN bash -c "cat .gitpod.bash_profile >> ~/.bash_profile \
+             && rm .gitpod.bash_profile"
 
 ### checks ###
 # no root-owned files in the home directory

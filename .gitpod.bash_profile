@@ -1,4 +1,3 @@
-source ~/.bash_profile
 PATH="$HOME/.sdkman/candidates/maven/current/bin:$PATH"
 
 ## COLOURS
