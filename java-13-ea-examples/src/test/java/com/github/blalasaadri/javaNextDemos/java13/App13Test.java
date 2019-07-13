@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class AppTest {
+public class App13Test {
 
     @Test
     public void shouldAnswerWithTrue() {
