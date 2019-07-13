@@ -7,6 +7,6 @@
 At the time of writing (July 2019), JDK 13 has not yet been released.
 Given the [relase schedule](https://openjdk.java.net/jeps/3) and the fact, that Rampdown Phase One for JDK 13 began on June 13th, 2019, the following JEPs are highly lightly (but not guaranteed) to be part of JDK 13 when it reaches general availability.
 
-- [Dynamic CDS Archives](https://openjdk.java.net/jeps/350)
-- [Switch Expressions (Preview)](https://openjdk.java.net/jeps/354)
-- [Text Blocks (Preview)](https://openjdk.java.net/jeps/355)
+- [JEP 350: Dynamic CDS Archives](https://openjdk.java.net/jeps/350)
+- [JEP 345: Switch Expressions (Preview)](https://openjdk.java.net/jeps/354) (not to be confused with [JEP 325: Switch Expressions (Preview)](https://openjdk.java.net/jeps/325), which was part of JDK 12)
+- [JEP 355: Text Blocks (Preview)](https://openjdk.java.net/jeps/355) (replaces [JEP 326: Raw String Literals (Preview)](https://openjdk.java.net/jeps/326))

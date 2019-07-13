@@ -4,5 +4,5 @@
 
 ## Selected new or improved features:
 
-- [Local-Variable Type Inference](https://openjdk.java.net/jeps/286)
-- [Application Class-Data Sharing](https://openjdk.java.net/jeps/310)
+- [JEP 286: Local-Variable Type Inference](https://openjdk.java.net/jeps/286)
+- [JEP 310: Application Class-Data Sharing](https://openjdk.java.net/jeps/310)

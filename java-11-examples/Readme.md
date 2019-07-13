@@ -4,8 +4,8 @@
 
 ## Selected new or improved features:
 
-- [HTTP Client (Standard)](https://openjdk.java.net/jeps/321)
-- [Local-Variable Syntax for Lambda Parameters](https://openjdk.java.net/jeps/323)
-- [Flight Recorder](https://openjdk.java.net/jeps/328)
-- [Launch Single-File Source-Code Programs](https://openjdk.java.net/jeps/330)
-- [Transport Layer Security (TLS) 1.3](https://openjdk.java.net/jeps/332)
+- [JEP 321: HTTP Client (Standard)](https://openjdk.java.net/jeps/321)
+- [JEP 323: Local-Variable Syntax for Lambda Parameters](https://openjdk.java.net/jeps/323)
+- [JEP 328: Flight Recorder](https://openjdk.java.net/jeps/328)
+- [JEP 330: Launch Single-File Source-Code Programs](https://openjdk.java.net/jeps/330)
+- [JEP 332: Transport Layer Security (TLS) 1.3](https://openjdk.java.net/jeps/332)
