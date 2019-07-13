@@ -1,6 +1,7 @@
 image:
   file: .gitpod.dockerfile
 tasks:
+  - before: echo "source ~/.bash_profile" >> ~/.bashrc
   - command: jenv shell 14-ea && jshell
 github:
   prebuilds:
