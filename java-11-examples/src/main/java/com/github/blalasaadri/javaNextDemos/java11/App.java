@@ -1,4 +1,4 @@
-package com.github.blalasaadri.javaNextDemos;
+package com.github.blalasaadri.javaNextDemos.java11;
 
 public class App {
     public static void main( String[] args ) {

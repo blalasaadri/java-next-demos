@@ -5,16 +5,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.blalasaadri.javaNextDemos</groupId>
-  <artifactId>java-10-examples</artifactId>
+  <artifactId>java-13-ea-examples</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>java-10-examples</name>
+  <name>java-13-ea-examples</name>
   <url>https://github.com/blalasaadri/java-next-demos</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.directory>target</project.build.directory>
-    <java.version>10</java.version>
+    <java.version>13</java.version>
   </properties>
 
   <dependencies>
