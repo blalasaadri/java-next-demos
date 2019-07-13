@@ -51,36 +51,32 @@ RUN curl -s "https://get.sdkman.io" | bash \
              && printf '<settings>\n  <localRepository>/workspace/m2-repository/</localRepository>\n</settings>\n' > /home/gitpod/.m2/settings.xml"
 ## Setup Java versions
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
+             && sdk install java 8.0.212.hs-adpt"
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
+             && sdk install java 9.0.4-open"
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
              && sdk install java 10.0.2-open \
-             && sdk default java 10.0.2-open \
-             && jenv add /home/gitpod/.sdkman/candidates/java/10.0.2-open \
-             && ln -s /home/gitpod/.jenv/versions/10.0.2-open /home/gitpod/.jenv/versions/10"
+             && sdk default java 10.0.2-open"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 11.0.2-open \
-             && jenv add /home/gitpod/.sdkman/candidates/java/11.0.2-open \
-             && ln -s /home/gitpod/.jenv/versions/11.0.2-open /home/gitpod/.jenv/versions/11"
+             && sdk install java 11.0.2-open"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 12.0.1-open \
-             && jenv add /home/gitpod/.sdkman/candidates/java/12.0.1-open \
-             && ln -s /home/gitpod/.jenv/versions/12.0.1-open /home/gitpod/.jenv/versions/12"
+             && sdk install java 12.0.1-open"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 13.ea.29-open \
-             && jenv add /home/gitpod/.sdkman/candidates/java/13.ea.29-open \
-             && ln -s /home/gitpod/.jenv/versions/13.ea.29-open /home/gitpod/.jenv/versions/13"
+             && sdk install java 13.ea.29-open"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 14.ea.5-open \
-             && jenv add /home/gitpod/.sdkman/candidates/java/14.ea.5-open \
-             && ln -s /home/gitpod/.jenv/versions/14.ea.5-open /home/gitpod/.jenv/versions/14"
-# RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-#             && skd install java 8.0.212.hs-adpt \
-#             && jenv add /home/gitpod/.sdkman/candidates/8.0.212.hs-adpt \
-#             && ln -s /home/gitpod/.sdkman/candidates/java/8.0.212.hs-adpt /home/gitpod/.sdkman/candidates/java/8"
-# RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-#             && sdk install java 9.0.4-open \
-#             && jenv add /home/gitpod/.sdkman/candidates/java/9.0.4-open \
-#             && ln -s /home/gitpod/.sdkman/candidates/java/9.0.4-open /home/gitpod/.sdkman/candidates/java/9"
+             && sdk install java 14.ea.5-open"
 ## Remove SDKMAN from the path, so it's not in the way of jEnv
 RUN bash -c "head -n -4 ~/.bashrc > ~/.bashrc"
+## Add Java versions to Jenv
+RUN bash -c "eval \"\$(jenv init -)\" \
+             && jenv add /home/gitpod/.sdkman/candidates/java/8.0.212.hs-adpt \
+             && jenv add /home/gitpod/.sdkman/candidates/java/9.0.4-open \
+             && jenv add /home/gitpod/.sdkman/candidates/java/10.0.2-open \
+             && jenv add /home/gitpod/.sdkman/candidates/java/11.0.2-open \
+             && jenv add /home/gitpod/.sdkman/candidates/java/12.0.1-open \
+             && jenv add /home/gitpod/.sdkman/candidates/java/13.ea.29-open \
+             && jenv add /home/gitpod/.sdkman/candidates/java/14.ea.5-open \
+             "
 
 RUN jenv rehash
 RUN bash -c "jenv sh-enable-plugin export \
