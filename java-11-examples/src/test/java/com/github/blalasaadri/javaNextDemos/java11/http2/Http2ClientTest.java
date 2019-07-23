@@ -3,7 +3,6 @@ package com.github.blalasaadri.javaNextDemos.java11.http2;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

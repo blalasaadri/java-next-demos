@@ -18,6 +18,7 @@
 
         <jackson.version>2.9.8</jackson.version>
         <immutables.version>2.7.4</immutables.version>
+        <jsr305.version>3.0.2</jsr305.version>
     </properties>
 
     <dependencies>
@@ -31,6 +32,11 @@
             <artifactId>value</artifactId>
             <version>${immutables.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>${jsr305.version}</version>
         </dependency>
 
         <dependency>
@@ -107,6 +113,28 @@
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.github.blalasaadri.javaNextDemos.java11.App11</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
