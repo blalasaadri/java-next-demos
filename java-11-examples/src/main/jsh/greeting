@@ -1,0 +1,29 @@
+#!/usr/bin/env java --source 11
+
+public class Greet {
+    public static void main(String[] args) {
+        System.out.println(Greetings.hello(args));
+        System.out.println(Greetings.goodbye(args));
+    }
+}
+
+public class Greetings {
+
+    public static String hello(String[] args) {
+        var name = "World";
+        if (args != null && args.length > 0) {
+            name = args[0];
+        }
+        return String.format("Hello, %s!", name);
+    }
+
+    public static String goodbye(String[] args) {
+        var name = "World";
+        if (args != null && args.length > 0) {
+            name = args[0];
+        }
+        return String.format("Farewell, %s!", name);
+    }
+}
+
+// More examples under https://dzone.com/articles/launch-single-file-source-code-programs-in-jdk-11
