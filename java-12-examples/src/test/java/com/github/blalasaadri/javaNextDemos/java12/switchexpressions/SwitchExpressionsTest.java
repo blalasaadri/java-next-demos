@@ -1,16 +1,17 @@
-package com.github.blalasaadri.javaNextDemos.java12;
+package com.github.blalasaadri.javaNextDemos.java12.switchexpressions;
 
+import com.github.blalasaadri.javaNextDemos.java12.switchexpressions.SwitchExpressions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class App12Test {
+class SwitchExpressionsTest {
 
     @Test
     void forHi_shouldGreetWithQuestion() {
-        String greeting = App12.greet("Hi", "World");
+        String greeting = SwitchExpressions.greet("Hi", "World");
 
         assertThat(greeting)
                 .isEqualTo("Hi World! How are you doing?");
@@ -18,7 +19,7 @@ class App12Test {
 
     @Test
     void forHey_shouldGreetWithHeyThere() {
-        String greeting = App12.greet("Hey", "World");
+        String greeting = SwitchExpressions.greet("Hey", "World");
 
         assertThat(greeting)
                 .isEqualTo("Hey there, World.");
@@ -27,7 +28,7 @@ class App12Test {
     @ParameterizedTest
     @ValueSource(strings = { "Hay", "Hj" })
     void forMisspellings_shouldGreetWithCorrection(String prompt) {
-        String greeting = App12.greet(prompt, "World");
+        String greeting = SwitchExpressions.greet(prompt, "World");
 
         assertThat(greeting)
                 .endsWith("you should check your spelling. ;-)");
@@ -36,7 +37,7 @@ class App12Test {
     @ParameterizedTest
     @ValueSource(strings = { "¡Hola!", "Ciao" })
     void forUnknownGreetings_shouldGreetWithHello(String prompt) {
-        String greeting = App12.greet(prompt, "World");
+        String greeting = SwitchExpressions.greet(prompt, "World");
 
         assertThat(greeting)
                 .isEqualTo("Hello, World!");
