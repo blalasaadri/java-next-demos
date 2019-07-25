@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.TestInstance.Lifecycle;
 
+@SuppressWarnings("InnerClassMayBeStatic")
 class App10Test {
 
     @Nested

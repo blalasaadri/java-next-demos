@@ -10,7 +10,7 @@ Given the [relase schedule](https://openjdk.java.net/jeps/3), it is currently un
 The following are JEPs for which it is already clear, that they have some potential of being delivered in March 2020:
 
 - [JEP 343: Packaging Tool](https://openjdk.java.net/jeps/343)
-- [JEP 352: Non-Volatile Mapped Byte Buffers](https://openjdk.java.net/jeps/352)
+- [JEP 352: Non-Volatile Mapped Byte Buffers](https://openjdk.java.net/jeps/352) (this is currently [targeted for JDK 14](http://openjdk.java.net/projects/jdk/14/))
 
 ## Future developments to look out for
 

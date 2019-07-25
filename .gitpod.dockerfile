@@ -60,12 +60,13 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
              && sdk install java 11.0.2-open"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 12.0.1-open"
+             && sdk install java 12.0.2-open"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 13.ea.29-open"
+             && sdk install java 13.ea.30-open"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 14.ea.5-open"
+             && sdk install java 14.ea.6-open"
 ## Remove SDKMAN from the path, so it's not in the way of jEnv
+RUN cp ~/.bashrc ~/.bashrc.bak
 RUN bash -c "head -n -4 ~/.bashrc > ~/.bashrc"
 ## Add Java versions to Jenv
 RUN bash -c "eval \"\$(jenv init -)\" \
@@ -73,9 +74,9 @@ RUN bash -c "eval \"\$(jenv init -)\" \
              && jenv add /home/gitpod/.sdkman/candidates/java/9.0.4-open \
              && jenv add /home/gitpod/.sdkman/candidates/java/10.0.2-open \
              && jenv add /home/gitpod/.sdkman/candidates/java/11.0.2-open \
-             && jenv add /home/gitpod/.sdkman/candidates/java/12.0.1-open \
-             && jenv add /home/gitpod/.sdkman/candidates/java/13.ea.29-open \
-             && jenv add /home/gitpod/.sdkman/candidates/java/14.ea.5-open \
+             && jenv add /home/gitpod/.sdkman/candidates/java/12.0.2-open \
+             && jenv add /home/gitpod/.sdkman/candidates/java/13.ea.30-open \
+             && jenv add /home/gitpod/.sdkman/candidates/java/14.ea.6-open \
              "
 
 RUN jenv rehash
