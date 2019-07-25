@@ -120,11 +120,15 @@
             </executions>
         </plugin>
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
+            <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
-                <source>12</source>
-                <target>12</target>
+                <argLine>--enable-preview</argLine>
+            </configuration>
+        </plugin>
+        <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <configuration>
+                <argLine>--enable-preview</argLine>
             </configuration>
         </plugin>
     </plugins>
