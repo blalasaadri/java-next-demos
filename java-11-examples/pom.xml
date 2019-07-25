@@ -16,7 +16,7 @@
         <project.build.directory>target</project.build.directory>
         <java.version>11</java.version>
 
-        <jackson.version>2.9.8</jackson.version>
+        <jackson.version>[2.9.9.1,)</jackson.version>
         <immutables.version>2.7.4</immutables.version>
         <jsr305.version>3.0.2</jsr305.version>
     </properties>
