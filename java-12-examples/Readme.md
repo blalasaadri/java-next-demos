@@ -1,6 +1,6 @@
 # Java 12
 
-[JDK 12](https://openjdk.java.net/projects/jdk/10/) was released to the general public on March 19th, 2019.
+[JDK 12](https://openjdk.java.net/projects/jdk/12/) was released to the general public on March 19th, 2019.
 
 ## Selected new or improved features:
 
