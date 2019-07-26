@@ -51,7 +51,7 @@ RUN curl -s "https://get.sdkman.io" | bash \
              && printf '<settings>\n  <localRepository>/workspace/m2-repository/</localRepository>\n</settings>\n' > /home/gitpod/.m2/settings.xml"
 ## Setup Java versions
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 8.0.212.hs-adpt"
+             && sdk install java 8.0.222.hs-adpt"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
              && sdk install java 9.0.4-open"
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
@@ -70,7 +70,7 @@ RUN cp ~/.bashrc ~/.bashrc.bak
 RUN bash -c "head -n -4 ~/.bashrc > ~/.bashrc"
 ## Add Java versions to Jenv
 RUN bash -c "eval \"\$(jenv init -)\" \
-             && jenv add /home/gitpod/.sdkman/candidates/java/8.0.212.hs-adpt \
+             && jenv add /home/gitpod/.sdkman/candidates/java/8.0.222.hs-adpt \
              && jenv add /home/gitpod/.sdkman/candidates/java/9.0.4-open \
              && jenv add /home/gitpod/.sdkman/candidates/java/10.0.2-open \
              && jenv add /home/gitpod/.sdkman/candidates/java/11.0.2-open \
