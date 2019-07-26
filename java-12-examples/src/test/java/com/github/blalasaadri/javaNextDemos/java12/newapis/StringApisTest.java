@@ -90,17 +90,20 @@ class StringApisTest {
 
         @Test
         void transform_canTranssformStringsIntoNonStrings() {
-            var transformedValue =
+            int transformedValue =
                     "{ \"id\": 123, \"name\": \"myWonderfulObject\" }"
-                            .transform(s -> {
-                                Pattern p = Pattern.compile(".*\"id\":\\s*(?<digits>\\d+).*");
-                                Matcher matcher = p.matcher(s);
-                                matcher.find();
-                                return matcher.group("digits");
-                            }).transform(Integer::parseInt);
+                            .transform(this::extractIdAsString)
+                            .transform(Integer::parseInt);
 
             assertThat(transformedValue)
                     .isEqualTo(123);
+        }
+
+        private String extractIdAsString(String s) {
+            Pattern p = Pattern.compile(".*\"id\":\\s*(?<digits>\\d+).*");
+            Matcher matcher = p.matcher(s);
+            matcher.find();
+            return matcher.group("digits");
         }
     }
 }

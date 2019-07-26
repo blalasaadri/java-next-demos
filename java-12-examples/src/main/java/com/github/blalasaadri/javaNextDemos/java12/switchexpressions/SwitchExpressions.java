@@ -2,7 +2,7 @@ package com.github.blalasaadri.javaNextDemos.java12.switchexpressions;
 
 public class SwitchExpressions {
     public static String greet(String greeting, String name) {
-        String greetingFormat = switch (greeting) {
+        var greetingFormat = switch (greeting) {
             case "Hi" -> "Hi %s! How are you doing?";
             case "Hey" -> "Hey there, %s.";
             case "Hay", "Hj" -> "Howdy %s, you should check your spelling. ;-)";

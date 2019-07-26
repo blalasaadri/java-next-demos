@@ -14,15 +14,25 @@ public class Http2Client {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    public <T> Optional<T> getViaHttp2(String url, Class<T> responseClass) throws IOException, InterruptedException {
+    public <T> Optional<T> getViaHttp2(
+            String url,
+            Class<T> responseClass
+    ) throws IOException, InterruptedException {
         return getViaHttp(HttpClient.Version.HTTP_2, url, responseClass);
     }
 
-    public <T> Optional<T> getViaHttp1(String url, Class<T> responseClass) throws IOException, InterruptedException {
+    public <T> Optional<T> getViaHttp1(
+            String url,
+            Class<T> responseClass
+    ) throws IOException, InterruptedException {
         return getViaHttp(HttpClient.Version.HTTP_1_1, url, responseClass);
     }
 
-    private <T> Optional<T> getViaHttp(HttpClient.Version httpVersion, String url, Class<T> responseClass) throws IOException, InterruptedException {
+    private <T> Optional<T> getViaHttp(
+            HttpClient.Version httpVersion,
+            String url,
+            Class<T> responseClass
+    ) throws IOException, InterruptedException {
         var httpClient = HttpClient.newBuilder()
                 .version(httpVersion)
                 .connectTimeout(Duration.ofSeconds(5))
@@ -33,7 +43,7 @@ public class Http2Client {
                 .uri(URI.create(url))
                 .header("Accept-Type", "application/json")
                 .build();
-        var response = httpClient.send(
+        HttpResponse<String> response = httpClient.send(
                 request,
                 HttpResponse.BodyHandlers.ofString()
         );
